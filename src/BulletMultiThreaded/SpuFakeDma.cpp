@@ -14,7 +14,7 @@ subject to the following restrictions:
 */
 
 #include "SpuFakeDma.h"
-#include <LinearMath/btScalar.h> //for btAssert
+#include "LinearMath/btScalar.h" //for btAssert
 //Disabling memcpy sometimes helps debugging DMA
 
 #define USE_MEMCPY 1
