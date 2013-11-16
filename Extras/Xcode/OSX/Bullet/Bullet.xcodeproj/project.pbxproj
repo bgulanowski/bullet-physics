@@ -608,6 +608,7 @@
 		845073C21773C27F00D91C19 /* btTransformUtil.h in Copy Headers - LinearMath */ = {isa = PBXBuildFile; fileRef = 845070931773A69600D91C19 /* btTransformUtil.h */; };
 		845073C31773C27F00D91C19 /* btVector3.h in Copy Headers - LinearMath */ = {isa = PBXBuildFile; fileRef = 845070951773A69600D91C19 /* btVector3.h */; };
 		845073C41773C41100D91C19 /* Bullet.h in Headers */ = {isa = PBXBuildFile; fileRef = 84506E951773A60200D91C19 /* Bullet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		845073C71773C82E00D91C19 /* BTDiscreteDynamicsWorld.mm in Sources */ = {isa = PBXBuildFile; fileRef = 845073C61773C71500D91C19 /* BTDiscreteDynamicsWorld.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1417,6 +1418,8 @@
 		845070BB1773A69600D91C19 /* vectormath_aos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vectormath_aos.h; sourceTree = "<group>"; };
 		845070BC1773A69600D91C19 /* vmInclude.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vmInclude.h; sourceTree = "<group>"; };
 		845072F81773AB8C00D91C19 /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = System/Library/Frameworks/OpenCL.framework; sourceTree = SDKROOT; };
+		845073C51773C71500D91C19 /* BTDiscreteDynamicsWorld.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTDiscreteDynamicsWorld.h; sourceTree = "<group>"; };
+		845073C61773C71500D91C19 /* BTDiscreteDynamicsWorld.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BTDiscreteDynamicsWorld.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2270,6 +2273,8 @@
 		845072FA1773AC8700D91C19 /* Wrappers */ = {
 			isa = PBXGroup;
 			children = (
+				845073C51773C71500D91C19 /* BTDiscreteDynamicsWorld.h */,
+				845073C61773C71500D91C19 /* BTDiscreteDynamicsWorld.mm */,
 			);
 			name = Wrappers;
 			sourceTree = "<group>";
@@ -2659,6 +2664,7 @@
 				845071841773A69600D91C19 /* btGjkEpa2.cpp in Sources */,
 				845070CF1773A69600D91C19 /* btOverlappingPairCache.cpp in Sources */,
 				845072421773A69600D91C19 /* SpuSampleTaskProcess.cpp in Sources */,
+				845073C71773C82E00D91C19 /* BTDiscreteDynamicsWorld.mm in Sources */,
 				845071301773A69600D91C19 /* btMultimaterialTriangleMeshShape.cpp in Sources */,
 				845071C11773A69600D91C19 /* btRigidBody.cpp in Sources */,
 				8450715D1773A69600D91C19 /* btGImpactBvh.cpp in Sources */,
