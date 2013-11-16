@@ -1471,9 +1471,9 @@
 		84506E8E1773A60200D91C19 /* Bullet */ = {
 			isa = PBXGroup;
 			children = (
+				84506E951773A60200D91C19 /* Bullet.h */,
 				845072FA1773AC8700D91C19 /* Wrappers */,
 				84506EB31773A69600D91C19 /* src */,
-				84506E951773A60200D91C19 /* Bullet.h */,
 				84506E8F1773A60200D91C19 /* Supporting Files */,
 			);
 			path = Bullet;
