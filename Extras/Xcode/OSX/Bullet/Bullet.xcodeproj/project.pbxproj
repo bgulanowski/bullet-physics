@@ -929,7 +929,7 @@
 		84506E921773A60200D91C19 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84506E941773A60200D91C19 /* Bullet-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bullet-Prefix.pch"; sourceTree = "<group>"; };
 		84506E951773A60200D91C19 /* Bullet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bullet.h; sourceTree = "<group>"; };
-		84506E9C1773A60200D91C19 /* BulletTests.xctest */ = {isa = PBXFileReference; explicitFileType = folder; includeInIndex = 0; path = BulletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84506E9C1773A60200D91C19 /* BulletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BulletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84506EA51773A60200D91C19 /* BulletTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BulletTests-Info.plist"; sourceTree = "<group>"; };
 		84506EA71773A60200D91C19 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84506EA91773A60200D91C19 /* BulletTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BulletTests.m; sourceTree = "<group>"; };
@@ -2941,6 +2941,8 @@
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bullet/Bullet-Prefix.pch";
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
 				INFOPLIST_FILE = "Bullet/Bullet-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../../../src";
@@ -2957,6 +2959,8 @@
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bullet/Bullet-Prefix.pch";
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
 				INFOPLIST_FILE = "Bullet/Bullet-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../../../src";
