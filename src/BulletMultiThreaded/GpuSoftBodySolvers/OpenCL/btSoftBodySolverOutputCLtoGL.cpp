@@ -80,7 +80,7 @@ void btSoftBodySolverOutputCLtoGL::copySoftBodyToVertexBuffer( const btSoftBody 
 			btAssert( 0 &&  "clEnqueueReleaseGLObjects(copySoftBodyToVertexBuffer)");
 		}
 	} else {
-		btAssert( "Undefined output for this solver output" == false );
+		btAssert( "Undefined output for this solver output" == nullptr );
 	}
 
 	// clFinish in here may not be the best thing. It's possible that we should have a waitForFrameComplete function.
