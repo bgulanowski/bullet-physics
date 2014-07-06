@@ -297,6 +297,10 @@ void*	SolverlsMemoryFunc()
 
 
 static SIMD_FORCE_INLINE
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-function"
+
 void pfxGetPlaneSpace(const vmVector3& n, vmVector3& p, vmVector3& q)
 {
 	if(fabsf(n[2]) > 0.707f) {
@@ -325,6 +329,7 @@ void pfxGetPlaneSpace(const vmVector3& n, vmVector3& p, vmVector3& q)
 	}
 }
 
+#pragma clang diagnostic pop
 
 
 #define PFX_CONTACT_SLOP 0.001f
