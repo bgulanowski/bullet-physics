@@ -218,7 +218,7 @@ void deleteCollisionLocalStoreMemory()
 void	ProcessSpuConvexConvexCollision(SpuCollisionPairInput* wuInput, CollisionTask_LocalStoreMemory* lsMemPtr, SpuContactResult& spuContacts);
 
 
-SIMD_FORCE_INLINE void small_cache_read(void* buffer, ppu_address_t ea, size_t size)
+SIMD_FORCE_INLINE void small_cache_read(void* buffer, ppu_address_t ea, int size)
 {
 #if USE_SOFTWARE_CACHE
 	// Check for alignment requirements. We need to make sure the entire request fits within one cache line,
@@ -235,7 +235,7 @@ SIMD_FORCE_INLINE void small_cache_read(void* buffer, ppu_address_t ea, size_t s
 SIMD_FORCE_INLINE void small_cache_read_triple(	void* ls0, ppu_address_t ea0,
 												void* ls1, ppu_address_t ea1,
 												void* ls2, ppu_address_t ea2,
-												size_t size)
+												int size)
 {
 		btAssert(size<16);
 		ATTRIBUTE_ALIGNED16(char	tmpBuffer0[32]);
