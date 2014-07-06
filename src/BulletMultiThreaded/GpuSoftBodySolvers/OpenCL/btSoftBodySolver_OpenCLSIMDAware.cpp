@@ -597,15 +597,15 @@ bool btOpenCLSoftBodySolverSIMDAware::buildShaders()
 
 
 
-static Vectormath::Aos::Transform3 toTransform3( const btTransform &transform )
-{
-	Vectormath::Aos::Transform3 outTransform;
-	outTransform.setCol(0, toVector3(transform.getBasis().getColumn(0)));
-	outTransform.setCol(1, toVector3(transform.getBasis().getColumn(1)));
-	outTransform.setCol(2, toVector3(transform.getBasis().getColumn(2)));
-	outTransform.setCol(3, toVector3(transform.getOrigin()));
-	return outTransform;	
-}
+//static Vectormath::Aos::Transform3 toTransform3( const btTransform &transform )
+//{
+//	Vectormath::Aos::Transform3 outTransform;
+//	outTransform.setCol(0, toVector3(transform.getBasis().getColumn(0)));
+//	outTransform.setCol(1, toVector3(transform.getBasis().getColumn(1)));
+//	outTransform.setCol(2, toVector3(transform.getBasis().getColumn(2)));
+//	outTransform.setCol(3, toVector3(transform.getOrigin()));
+//	return outTransform;	
+//}
 
 
 static void generateBatchesOfWavefronts( btAlignedObjectArray < btAlignedObjectArray <int> > &linksForWavefronts, btSoftBodyLinkData &linkData, int numVertices, btAlignedObjectArray < btAlignedObjectArray <int> > &wavefrontBatches )

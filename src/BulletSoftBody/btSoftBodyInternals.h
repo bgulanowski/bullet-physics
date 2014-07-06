@@ -422,34 +422,34 @@ static inline btVector3		BaryCoord(	const btVector3& a,
 }
 
 //
-static btScalar				ImplicitSolve(	btSoftBody::ImplicitFn* fn,
-										  const btVector3& a,
-										  const btVector3& b,
-										  const btScalar accuracy,
-										  const int maxiterations=256)
-{
-	btScalar	span[2]={0,1};
-	btScalar	values[2]={fn->Eval(a),fn->Eval(b)};
-	if(values[0]>values[1])
-	{
-		btSwap(span[0],span[1]);
-		btSwap(values[0],values[1]);
-	}
-	if(values[0]>-accuracy) return(-1);
-	if(values[1]<+accuracy) return(-1);
-	for(int i=0;i<maxiterations;++i)
-	{
-		const btScalar	t=Lerp(span[0],span[1],values[0]/(values[0]-values[1]));
-		const btScalar	v=fn->Eval(Lerp(a,b,t));
-		if((t<=0)||(t>=1))		break;
-		if(btFabs(v)<accuracy)	return(t);
-		if(v<0)
-		{ span[0]=t;values[0]=v; }
-		else
-		{ span[1]=t;values[1]=v; }
-	}
-	return(-1);
-}
+//static btScalar				ImplicitSolve(	btSoftBody::ImplicitFn* fn,
+//										  const btVector3& a,
+//										  const btVector3& b,
+//										  const btScalar accuracy,
+//										  const int maxiterations=256)
+//{
+//	btScalar	span[2]={0,1};
+//	btScalar	values[2]={fn->Eval(a),fn->Eval(b)};
+//	if(values[0]>values[1])
+//	{
+//		btSwap(span[0],span[1]);
+//		btSwap(values[0],values[1]);
+//	}
+//	if(values[0]>-accuracy) return(-1);
+//	if(values[1]<+accuracy) return(-1);
+//	for(int i=0;i<maxiterations;++i)
+//	{
+//		const btScalar	t=Lerp(span[0],span[1],values[0]/(values[0]-values[1]));
+//		const btScalar	v=fn->Eval(Lerp(a,b,t));
+//		if((t<=0)||(t>=1))		break;
+//		if(btFabs(v)<accuracy)	return(t);
+//		if(v<0)
+//		{ span[0]=t;values[0]=v; }
+//		else
+//		{ span[1]=t;values[1]=v; }
+//	}
+//	return(-1);
+//}
 
 //
 static inline btVector3		NormalizeAny(const btVector3& v)
@@ -504,23 +504,23 @@ static inline btScalar		VolumeOf(	const btVector3& x0,
 }
 
 //
-static void					EvaluateMedium(	const btSoftBodyWorldInfo* wfi,
-										   const btVector3& x,
-										   btSoftBody::sMedium& medium)
-{
-	medium.m_velocity	=	btVector3(0,0,0);
-	medium.m_pressure	=	0;
-	medium.m_density	=	wfi->air_density;
-	if(wfi->water_density>0)
-	{
-		const btScalar	depth=-(btDot(x,wfi->water_normal)+wfi->water_offset);
-		if(depth>0)
-		{
-			medium.m_density	=	wfi->water_density;
-			medium.m_pressure	=	depth*wfi->water_density*wfi->m_gravity.length();
-		}
-	}
-}
+//static void					EvaluateMedium(	const btSoftBodyWorldInfo* wfi,
+//										   const btVector3& x,
+//										   btSoftBody::sMedium& medium)
+//{
+//	medium.m_velocity	=	btVector3(0,0,0);
+//	medium.m_pressure	=	0;
+//	medium.m_density	=	wfi->air_density;
+//	if(wfi->water_density>0)
+//	{
+//		const btScalar	depth=-(btDot(x,wfi->water_normal)+wfi->water_offset);
+//		if(depth>0)
+//		{
+//			medium.m_density	=	wfi->water_density;
+//			medium.m_pressure	=	depth*wfi->water_density*wfi->m_gravity.length();
+//		}
+//	}
+//}
 
 //
 static inline void			ApplyClampedForce(	btSoftBody::Node& n,
