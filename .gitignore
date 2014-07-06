@@ -17,6 +17,7 @@ profile
 *.log
 *.bin
 *.cmake
+*.a
 
 #CMake
 CMake*
