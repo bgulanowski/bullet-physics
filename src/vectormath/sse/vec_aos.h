@@ -681,6 +681,11 @@ VECTORMATH_FORCE_INLINE const Vector3 select( const Vector3 &vec0, const Vector3
     return select( vec0, vec1, boolInVec(select1) );
 }
 
+VECTORMATH_FORCE_INLINE  const Vector3 select(const Vector3& vec0, const Vector3& vec1, const boolInVec& select1)
+{
+    return Vector3(vec_sel(vec0.get128(), vec1.get128(), select1.get128()));
+}
+
 
 VECTORMATH_FORCE_INLINE  const Vector4 select(const Vector4& vec0, const Vector4& vec1, const boolInVec& select1)
 {
