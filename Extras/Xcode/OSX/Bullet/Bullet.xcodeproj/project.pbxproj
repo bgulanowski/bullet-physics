@@ -1308,12 +1308,12 @@
 		845070401773A69600D91C19 /* boxBoxDistance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = boxBoxDistance.cpp; sourceTree = "<group>"; };
 		845070411773A69600D91C19 /* boxBoxDistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = boxBoxDistance.h; sourceTree = "<group>"; };
 		845070421773A69600D91C19 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
-		845070431773A69600D91C19 /* SpuCollisionShapes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpuCollisionShapes.cpp; sourceTree = "<group>"; };
+		845070431773A69600D91C19 /* SpuCollisionShapes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = SpuCollisionShapes.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		845070441773A69600D91C19 /* SpuCollisionShapes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpuCollisionShapes.h; sourceTree = "<group>"; };
 		845070451773A69600D91C19 /* SpuContactResult.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpuContactResult.cpp; sourceTree = "<group>"; };
 		845070461773A69600D91C19 /* SpuContactResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpuContactResult.h; sourceTree = "<group>"; };
 		845070471773A69600D91C19 /* SpuConvexPenetrationDepthSolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpuConvexPenetrationDepthSolver.h; sourceTree = "<group>"; };
-		845070481773A69600D91C19 /* SpuGatheringCollisionTask.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpuGatheringCollisionTask.cpp; sourceTree = "<group>"; };
+		845070481773A69600D91C19 /* SpuGatheringCollisionTask.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = SpuGatheringCollisionTask.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		845070491773A69600D91C19 /* SpuGatheringCollisionTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpuGatheringCollisionTask.h; sourceTree = "<group>"; };
 		8450704A1773A69600D91C19 /* SpuLocalSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpuLocalSupport.h; sourceTree = "<group>"; };
 		8450704B1773A69600D91C19 /* SpuMinkowskiPenetrationDepthSolver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpuMinkowskiPenetrationDepthSolver.cpp; sourceTree = "<group>"; };

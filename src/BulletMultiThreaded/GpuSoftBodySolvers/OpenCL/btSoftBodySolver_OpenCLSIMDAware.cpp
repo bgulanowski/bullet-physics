@@ -264,9 +264,9 @@ void btOpenCLSoftBodySolverSIMDAware::optimize( btAlignedObjectArray< btSoftBody
 			{
 				// Note that large array storage is relative to the array not to the cloth
 				// So we need to add firstVertex to each value
-				int vertexIndex0 = (softBody->m_faces[triangle].m_n[0] - &(softBody->m_nodes[0]));
-				int vertexIndex1 = (softBody->m_faces[triangle].m_n[1] - &(softBody->m_nodes[0]));
-				int vertexIndex2 = (softBody->m_faces[triangle].m_n[2] - &(softBody->m_nodes[0]));
+				int vertexIndex0 = int(softBody->m_faces[triangle].m_n[0] - &(softBody->m_nodes[0]));
+				int vertexIndex1 = int(softBody->m_faces[triangle].m_n[1] - &(softBody->m_nodes[0]));
+				int vertexIndex2 = int(softBody->m_faces[triangle].m_n[2] - &(softBody->m_nodes[0]));
 				btSoftBodyTriangleData::TriangleDescription newTriangle(vertexIndex0 + firstVertex, vertexIndex1 + firstVertex, vertexIndex2 + firstVertex);
 				getTriangleData().setTriangleAt( newTriangle, firstTriangle + triangle );
 				
@@ -286,8 +286,8 @@ void btOpenCLSoftBodySolverSIMDAware::optimize( btAlignedObjectArray< btSoftBody
 			// Add the links
 			for( int link = 0; link < numLinks; ++link )
 			{
-				int vertexIndex0 = softBody->m_links[link].m_n[0] - &(softBody->m_nodes[0]);
-				int vertexIndex1 = softBody->m_links[link].m_n[1] - &(softBody->m_nodes[0]);
+				int vertexIndex0 = int(softBody->m_links[link].m_n[0] - &(softBody->m_nodes[0]));
+				int vertexIndex1 = int(softBody->m_links[link].m_n[1] - &(softBody->m_nodes[0]));
 
 				btSoftBodyLinkData::LinkDescription newLink(vertexIndex0 + firstVertex, vertexIndex1 + firstVertex, softBody->m_links[link].m_material->m_kLST);
 				newLink.setLinkStrength(1.f);

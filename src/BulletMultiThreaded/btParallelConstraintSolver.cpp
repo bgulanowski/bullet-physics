@@ -804,7 +804,7 @@ void CustomSplitConstraints(
 			
 			for(;i<numPairs&&pairCount<targetCount;i++) {
 				uint32_t idxP = i>>5;
-				uint32_t maskP = 1L << (i & 31);
+				uint32_t maskP = 1 << (i & 31);
 				
 				//pair is already assigned to a phase/batch
 				if(pairTable[idxP] & maskP) {
@@ -1306,7 +1306,7 @@ btScalar btParallelConstraintSolver::solveGroup(btCollisionObject** bodies1,int 
 				pfxSetActive(pair,numPosPoints>0);
 				
 				pfxSetBroadphaseFlag(pair,0);
-				int contactId = m-offsetContactManifolds;
+				int contactId = int(m-offsetContactManifolds);
 				//likely the contact pool is not contiguous, make sure to allocate large enough contact pool
 				btAssert(contactId>=0);
 				btAssert(contactId<dispatcher->getInternalManifoldPool()->getMaxCount());
@@ -1473,7 +1473,7 @@ btScalar btParallelConstraintSolver::solveGroup(btCollisionObject** bodies1,int 
 						pfxSetMotionMaskB(pair,m_memoryCache->m_mystates[idB].getMotionMask());
 
 					pfxSetActive(pair,true);
-					int id = currentConstraintRow-offsetSolverConstraints;
+					int id = int(currentConstraintRow-offsetSolverConstraints);
 					pfxSetContactId(pair,id);
 					actualNumJoints++;
 
