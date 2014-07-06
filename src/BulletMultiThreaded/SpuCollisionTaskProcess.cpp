@@ -148,21 +148,17 @@ void SpuCollisionTaskProcess::issueTask2()
 
 	if (m_numBusyTasks >= m_maxNumOutstandingTasks)
 	{
-		unsigned int taskId;
+		unsigned int taskId = 0;
 		unsigned int outputSize;
 
-		
-		for (int i=0;i<int (m_maxNumOutstandingTasks);i++)
-		  {
-			  if (m_taskBusy[i])
-			  {
-				  taskId = i;
-				  break;
-			  }
-		  }
-
-	  btAssert(taskId>=0);
-
+		for (int i=0;;i++)
+		{
+			if (m_taskBusy[i])
+			{
+				taskId = i;
+				break;
+			}
+		}
 	  
 		m_threadInterface->waitForResponse(&taskId, &outputSize);
 
