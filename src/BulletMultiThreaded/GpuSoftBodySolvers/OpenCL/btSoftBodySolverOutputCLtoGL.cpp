@@ -7,7 +7,7 @@
 
 ////OpenCL 1.0 kernels don't use float3
 #define MSTRINGIFY(A) #A
-static char* OutputToVertexArrayCLString =
+static const char * OutputToVertexArrayCLString =
 #include "OpenCLC10/OutputToVertexArray.cl"
 
 	
